@@ -1,7 +1,7 @@
 # 15-Puzzle
 Console-based game Written in c++ (bad code)
 
-![alt text](https://github.com/[username]/[reponame]/blob/main/image.png?raw=true)
+![alt text](https://github.com/log169/15-Puzzle/blob/main/image.png)
 
 empty tile is represented by the number '0'.
 
