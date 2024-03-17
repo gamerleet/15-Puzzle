@@ -18,9 +18,9 @@ int main()
 		cout << arr[4] << "  " << arr[5] << "  " << arr[6] << "  " << arr[7] << '\n';
 		cout << arr[8] << "  " << arr[9] << "  " << arr[10] << "  " << arr[11] << '\n';
 		cout << arr[12] << "  " << arr[13] << "  " << arr[14] << "  " << arr[15] << '\n';
-	}};
+	} };
 
-	
+
 
 	for (auto i = 0; i < arr.size(); i++) {
 
@@ -43,7 +43,13 @@ int main()
 
 	while (!gameover) {
 
-		for (auto i = 0; i < 15; i++) {
+		cin.clear();
+		cin.ignore(300, '\n');
+		system("cls");
+		cout << "MOVES: " << moves << "\n\n\n";
+		display();
+
+		for (auto i = 0; i < 14; i++) {
 			if (arr[i + 1] != arr[i] + 1) {
 				checkedCases = 0;
 				break;
@@ -53,20 +59,16 @@ int main()
 			}
 		}
 
-		if (checkedCases == 15) {
+		if (checkedCases == 14) {
 			victory = true;
 			gameover = true;
 			break;
 		}
 
-		cin.clear();
-		cin.ignore(300, '\n');
-		system("cls");
-		cout << "MOVES: " << moves << "\n\n\n";
-		display();
+		
 
 		cout << "\n\nw(up), a(left), s(down), d(right), q(quit): ";
-		inp:
+	inp:
 		cin >> input;
 
 		if (cin.fail()) {
@@ -87,8 +89,8 @@ int main()
 			break;
 
 		case 'a':
-			if (!(EmptyTileIndex - 1 == 3 || EmptyTileIndex - 1 == 7 || EmptyTileIndex - 1 == 11 || EmptyTileIndex-1<0)) {
-				newIndex = EmptyTileIndex - 1;	
+			if (!(EmptyTileIndex - 1 == 3 || EmptyTileIndex - 1 == 7 || EmptyTileIndex - 1 == 11 || EmptyTileIndex - 1 < 0)) {
+				newIndex = EmptyTileIndex - 1;
 				moves++;
 			}
 			else {
@@ -102,7 +104,7 @@ int main()
 			break;
 
 		case 'd':
-			if (!(EmptyTileIndex + 1 == 4 || EmptyTileIndex + 1 == 8 || EmptyTileIndex + 1 == 12 || EmptyTileIndex+1 > 15)) {
+			if (!(EmptyTileIndex + 1 == 4 || EmptyTileIndex + 1 == 8 || EmptyTileIndex + 1 == 12 || EmptyTileIndex + 1 > 15)) {
 				newIndex = EmptyTileIndex + 1;
 				moves++;
 			}
@@ -135,13 +137,14 @@ int main()
 			gameover = true;
 			break;
 
+
 		default:
 			cin.clear();
 			cin.ignore(300, '\n');
 			goto inp;
 
 		}
-		
+
 	}
 
 	(victory) ? cout << "\n\nYOU WON THE GAME!\n\n" : cout << "\n\nYOU LOST THE GAME!\n\n";
