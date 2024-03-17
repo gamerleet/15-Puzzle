@@ -1,11 +1,13 @@
 # 15-Puzzle
 Console-based game Written in c++ (bad code)
 
-Inspired by [15puzzle](https://15puzzle.netlify.app/)
+Inspired from [15puzzle](https://15puzzle.netlify.app/)
 
 ![alt text](https://github.com/log169/15-Puzzle/blob/main/image.png)
 
 
 empty tile is represented by the number '0'.
 
-never tested the victory condition, so it might not work lul
+to win you must sort the numbers in order like this:
+
+!(https://kociemba.org/themen/fifteen/pics/puz.jpg)
