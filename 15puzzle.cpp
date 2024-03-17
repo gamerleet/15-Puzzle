@@ -1,6 +1,6 @@
 #include <iostream>
 #include <array>
-
+#include <conio.h>
 using namespace std;
 
 int main()
@@ -37,14 +37,11 @@ int main()
 	}
 
 	bool gameover = false, victory = false;
-	char input = 0;
 	int newIndex = 0, checkedCases = 0, moves = 0;
 	int OtherValAtOtherIndexLolCoolName = 0;
 
 	while (!gameover) {
 
-		cin.clear();
-		cin.ignore(300, '\n');
 		system("cls");
 		cout << "MOVES: " << moves << "\n\n\n";
 		display();
@@ -65,20 +62,12 @@ int main()
 			break;
 		}
 
-		
 
-		cout << "\n\nw(up), a(left), s(down), d(right), q(quit): ";
-	inp:
-		cin >> input;
+		cout << "\n\nw(up), a(left), s(down), d(right), q(quit)\n";
 
-		if (cin.fail()) {
-			cin.clear();
-			cin.ignore(300, '\n');
-			goto inp;
-		}
+		while (_kbhit() == 0);
 
-
-		switch (input) {
+		switch (static_cast<char>(_getch())) {
 
 		case 'w':
 			(EmptyTileIndex - 4 >= 0) ? newIndex = (EmptyTileIndex - 4), moves++ : newIndex = EmptyTileIndex;
@@ -137,14 +126,7 @@ int main()
 			gameover = true;
 			break;
 
-
-		default:
-			cin.clear();
-			cin.ignore(300, '\n');
-			goto inp;
-
 		}
-
 	}
 
 	(victory) ? cout << "\n\nYOU WON THE GAME!\n\n" : cout << "\n\nYOU LOST THE GAME!\n\n";
