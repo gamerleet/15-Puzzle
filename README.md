@@ -6,5 +6,6 @@ Inspired by [15puzzle](https://15puzzle.netlify.app/)
 ![alt text](https://github.com/log169/15-Puzzle/blob/main/image.png)
 
 
-empty tile is represented by the number '0'.\n
+empty tile is represented by the number '0'.
+
 never tested the victory condition, so it might not work lul
