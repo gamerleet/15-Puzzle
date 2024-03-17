@@ -10,4 +10,4 @@ empty tile is represented by the number '0'.
 
 to win you must sort the numbers in order like this:
 
-!(https://kociemba.org/themen/fifteen/pics/puz.jpg)
+![alt text](https://kociemba.org/themen/fifteen/pics/puz.jpg)
