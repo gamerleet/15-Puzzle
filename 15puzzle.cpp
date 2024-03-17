@@ -92,7 +92,7 @@ int main()
 			arr[EmptyTileIndex] = 0;
 			break;
 
-		case 'd':
+		case 'd': 
 			if (!(EmptyTileIndex + 1 == 4 || EmptyTileIndex + 1 == 8 || EmptyTileIndex + 1 == 12 || EmptyTileIndex + 1 > 15)) {
 				newIndex = EmptyTileIndex + 1;
 				moves++;
